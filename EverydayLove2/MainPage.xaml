@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EverydayLove2"
+             x:Class="EverydayLove2.MainPage">
+    <ContentPage.BindingContext>
+        <local:MainViewModel />
+    </ContentPage.BindingContext>
+    
+    <!--<ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#512BD4"
+                          Offset="0.1" />
+            <GradientStop Color="#A860FE"
+                          Offset="0.5" />
+            <GradientStop Color="#EA838D"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>-->
+
+    <Grid>
+        <Image Source="background3.jpg"
+               Aspect="AspectFill" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <ScrollView Grid.Row="0">
+                <VerticalStackLayout Spacing="15"
+                                     Padding="30,0"
+                                     VerticalOptions="Center">
+
+                    <Image Source="{Binding Note.ImagePath}"
+                           IsVisible="{Binding Note.HasImage}"
+                           WidthRequest="300"
+                           MinimumWidthRequest="300"
+                           HeightRequest="350"
+                           MaximumHeightRequest="350"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Start"
+                           Margin="10"/>
+
+                    <Label Text="{Binding Note.NoteText}"
+                           SemanticProperties.HeadingLevel="Level1"
+                           Margin="30"
+                           FontSize="26"
+                           TextColor="White"
+                           LineBreakMode="WordWrap"
+                           HorizontalOptions="Center"
+                           FontFamily="OpenSans-Semibold" />
+
+                </VerticalStackLayout>
+            </ScrollView>
+            <Label Grid.Row="1"
+                   Text="{Binding Note.Sender}"
+                   FontSize="18"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontFamily="OpenSans-Semibold" />
+        </Grid>
+    </Grid>
+
+</ContentPage>
+
