@@ -1,0 +1,67 @@
+**Adatvédelem**
+
+Horváth Eszter az EverydayLove alkalmazást ingyenes alkalmazásként fejlesztette. Ezt a SZOLGÁLTATÁST Horváth Eszter ingyenesen bocsátja rendelkezésre, és változatlan formában történő használatra szánja.
+
+Ez az oldal arra szolgál, hogy tájékoztassa a látogatókat a személyes adatok gyűjtésével, felhasználásával és közzétételével kapcsolatos irányelveimről, ha valaki úgy dönt, hogy igénybe veszi a Szolgáltatásomat.
+
+Ha úgy dönt, hogy igénybe veszi a Szolgáltatásomat, akkor beleegyezik az információk gyűjtésébe és felhasználásába a jelen irányelvekkel kapcsolatban. Az általam gyűjtött személyes adatokat a Szolgáltatás nyújtására és fejlesztésére használom. Az Ön adatait nem használom fel és nem osztom meg senkivel, kivéve a jelen Adatvédelmi szabályzatban leírtak szerint.
+
+A jelen Adatvédelmi szabályzatban használt kifejezések ugyanazzal a jelentéssel bírnak, mint az EverydayLove weboldalon elérhető Általános Szerződési Feltételeinkben, kivéve, ha a jelen Adatvédelmi szabályzat másként nem határozza meg.
+
+**Információgyűjtés és felhasználás**
+
+Nem gyűjtök semmilyen személyes adatot.
+
+Az alkalmazás harmadik fél szolgáltatásait használja, amelyek az Ön azonosítására szolgáló információkat gyűjthetnek.
+
+Link az alkalmazás által használt harmadik fél szolgáltatók adatvédelmi irányelveihez
+
+* [Google Play Services](https://www.google.com/policies/privacy/)
+
+**Napló adatok**
+
+Szeretném tájékoztatni Önt, hogy amikor Ön használja a Szolgáltatásomat, az alkalmazás hibája esetén adatokat és információkat gyűjtök (harmadik fél termékein keresztül) a telefonján, úgynevezett naplóadatokat. Ezek a Naplóadatok olyan információkat tartalmazhatnak, mint az Ön eszközének Internet Protocol ("IP") címe, az eszköz neve, az operációs rendszer verziója, az alkalmazás konfigurációja a Szolgáltatásom használata során, a Szolgáltatás használatának időpontja és dátuma, valamint egyéb statisztikák.
+
+**Sütik**
+
+A sütik kis mennyiségű adatot tartalmazó fájlok, amelyeket általában anonim egyedi azonosítóként használnak. Ezeket az Ön által meglátogatott weboldalak küldik el a böngészőjének, és az eszköz belső memóriájában tárolódnak.
+
+Ez a Szolgáltatás nem használja kifejezetten ezeket a "sütiket". Az alkalmazás azonban használhat olyan harmadik féltől származó kódot és könyvtárakat, amelyek "cookie-kat" használnak információgyűjtéshez és szolgáltatásaik fejlesztéséhez. Önnek lehetősége van arra, hogy elfogadja vagy visszautasítsa ezeket a cookie-kat, és tudnia kell, ha egy cookie-t küldenek az eszközére. Ha úgy dönt, hogy elutasítja a cookie-kat, előfordulhat, hogy nem tudja használni a szolgáltatás egyes részeit.
+
+
+**Szolgáltatók**
+
+A következő okok miatt alkalmazhatok harmadik fél cégeket és személyeket:
+
+* Szolgáltatásunk megkönnyítése érdekében;
+* A szolgáltatás nyújtása a nevünkben;
+* a Szolgáltatással kapcsolatos szolgáltatások elvégzésére; vagy
+* Hogy segítsenek nekünk a Szolgáltatásunk használatának elemzésében.
+
+Szeretném tájékoztatni a Szolgáltatás felhasználóit, hogy ezek a harmadik felek hozzáférhetnek a személyes adataikhoz. Ennek oka a nevünkben rájuk bízott feladatok elvégzése. Ugyanakkor kötelesek az adatokat semmilyen más célra nem továbbítani vagy felhasználni.
+
+**Biztonság**
+
+Nagyra értékelem az Ön bizalmát, hogy megadja nekünk Személyes adatait, ezért törekszünk arra, hogy kereskedelmi szempontból elfogadható eszközöket alkalmazzunk azok védelmére. De ne feledje, hogy az interneten keresztül történő továbbítás vagy az elektronikus tárolás semmilyen módszere nem 100%-ig biztonságos és megbízható, és nem tudom garantálni az abszolút biztonságot.
+
+**Hivatkozások más oldalakra**
+
+Ez a szolgáltatás tartalmazhat más oldalakra mutató linkeket. Ha egy harmadik fél által megadott linkre kattint, akkor az adott oldalra kerül átirányításra. Vegye figyelembe, hogy ezeket a külső oldalakat nem én üzemeltetem. Ezért nyomatékosan ajánlom, hogy olvassa el ezen weboldalak adatvédelmi szabályzatát. Nincs befolyásom és nem vállalok felelősséget a harmadik fél webhelyeinek vagy szolgáltatásainak tartalmáért, adatvédelmi szabályzatáért vagy gyakorlatáért.
+
+**Gyermekek adatvédelme**
+
+Ezek a szolgáltatások nem szólnak 13 év alattiakhoz. 13 év alatti gyermekekről tudatosan nem gyűjtök személyazonosításra alkalmas adatokat. Abban az esetben, ha felfedezem, hogy egy 13 év alatti gyermek személyes adatokat adott meg nekem, azonnal törlöm azokat a szervereinkről. Ha Ön szülő vagy gyám, és tudomása van arról, hogy gyermeke személyes adatokat adott meg nekünk, kérem, lépjen kapcsolatba velem, hogy megtehessem a szükséges lépéseket.
+
+
+
+**Változások az adatvédelmi szabályzatban**
+
+Időről időre frissíthetem az Adatvédelmi szabályzatunkat. Ezért javasoljuk, hogy rendszeresen tekintse át ezt az oldalt a változások miatt. A változásokról az új Adatvédelmi szabályzat ezen az oldalon történő közzétételével értesítem Önt.
+
+Ez a szabályzat 2023-07-16-tól hatályos.
+
+**Kapcsolatfelvétel**
+
+Ha bármilyen kérdése vagy javaslata van az Adatvédelmi szabályzatommal kapcsolatban, ne habozzon kapcsolatba lépni velem a eszti.horvath97@gmail.com címen.
+
+Ez az adatvédelmi szabályzat oldal a [privacypolicytemplate.net](https://privacypolicytemplate.net) oldalon készült, és az [App Privacy Policy Generator](https://app-privacy-policy-generator.nisrulz.com/) által lett módosítva/generálva.
