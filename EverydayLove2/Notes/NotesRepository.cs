@@ -113,7 +113,6 @@ namespace EverydayLove2.Notes
 
         internal async Task<bool> ShouldShowNewNote()
         {
-            return true;
             await Initialize();
             var lastShownNote = await GetLastShownNote();
             var lastShown = lastShownNote.LastShown;

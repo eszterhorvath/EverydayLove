@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using EverydayLove2.Notes;
+using EverydayLove2.PushNotification;
 
 namespace EverydayLove2
 {
@@ -13,7 +14,11 @@ namespace EverydayLove2
         {
             _notesRepository = new NotesRepository();
 
-            Task.Run(async () => await LoadNote());
+            Task.Run(async () =>
+            {
+                await LoadNote();
+                await NotificationService.InitializeAsync();
+            });
         }
 
         public Note Note
