@@ -17,7 +17,7 @@ namespace EverydayLove2.PushNotification
 				Description = "Ma is nagyon szeretünk!",
 				Schedule = new NotificationRequestSchedule
 				{
-					NotifyTime = DateTime.Today.AddHours(8),
+					NotifyTime = DateTime.Today.AddHours(20),
                     RepeatType = NotificationRepeat.Daily
 				}
             };
