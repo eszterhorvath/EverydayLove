@@ -1,4 +1,6 @@
-﻿using Plugin.LocalNotification;
+﻿using CommunityToolkit.Maui;
+using EverydayLove2.Notes;
+using Plugin.LocalNotification;
 
 namespace EverydayLove2;
 
@@ -9,14 +11,26 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
-			.UseLocalNotification()
+            .UseMauiCommunityToolkit()
+            .UseLocalNotification()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			});
+                fonts.AddFont(filename: "materialdesignicons-webfont.ttf", alias: "MaterialDesignIcons");
+            });
 
-		return builder.Build();
+		builder.Services.AddSingleton<INotesRepository, NotesRepository>();
+        builder.Services.AddTransient<MainViewModel>();
+        builder.Services.AddTransient<MainPage>();
+        builder.Services.AddTransient<SavedNotesViewModel>();
+        builder.Services.AddTransient<SavedNotesPage>();
+        builder.Services.AddTransient<SettingsViewModel>();
+        builder.Services.AddTransient<SettingsPage>();
+
+        Settings.Initialize();
+
+        return builder.Build();
 	}
 }
 

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EverydayLove2"
+             x:Class="EverydayLove2.SettingsPage"
+             x:DataType="local:SettingsViewModel"
+             Background="{StaticResource Primary}">
+    <ScrollView>
+    <VerticalStackLayout>
+            <Label Text="Home Background:"
+                   FontSize="16"
+                   TextColor="White"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   FontFamily="OpenSans-Semibold"
+                   Margin="10"/>
+            <CollectionView ItemsSource="{Binding BackgroundImages}"
+                            SelectionMode="Single"
+                            SelectedItem="{Binding HomeBackground}"
+                            ItemsLayout="VerticalGrid, 2">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="local:BackgroundImage">
+                        <Grid>
+                            <Image Source="{Binding Path}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="160"
+                                   WidthRequest="160"
+                                   Margin="20"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label Text="Saved Page Background:"
+                   FontSize="16"
+                   TextColor="White"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   FontFamily="OpenSans-Semibold"
+                   Margin="10"/>
+            <CollectionView ItemsSource="{Binding BackgroundImages}"
+                            SelectionMode="Single"
+                            SelectedItem="{Binding SavedBackground}"
+                            ItemsLayout="VerticalGrid, 2">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="local:BackgroundImage">
+                        <Grid>
+                            <Image Source="{Binding Path}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="160"
+                                   WidthRequest="160"
+                                   Margin="20"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

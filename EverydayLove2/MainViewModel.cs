@@ -1,18 +1,17 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using EverydayLove2.Notes;
+﻿using EverydayLove2.Notes;
 using EverydayLove2.PushNotification;
 
 namespace EverydayLove2
 {
-	public class MainViewModel : INotifyPropertyChanged
+    public class MainViewModel : ViewModelBase
     {
         private readonly INotesRepository _notesRepository;
         private Note _note;
+        private bool _liked;
 
-        public MainViewModel()
+        public MainViewModel(INotesRepository notesRepository)
         {
-            _notesRepository = new NotesRepository();
+            _notesRepository = notesRepository;
 
             Task.Run(async () =>
             {
@@ -30,6 +29,22 @@ namespace EverydayLove2
                     return;
 
                 _note = value;
+                Liked = _note.Saved;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool Liked
+        {
+            get => _liked;
+            set
+            {
+                if (_liked == value)
+                    return;
+
+                _liked = value;
+                SaveOrRemoveNote();
+
                 OnPropertyChanged();
             }
         }
@@ -39,11 +54,10 @@ namespace EverydayLove2
             Note = await _notesRepository.GetNoteAsync();
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        public void SaveOrRemoveNote()
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            Note.Saved = Liked;
+            _notesRepository.SaveOrRemoveNote(Note, Liked);
         }
     }
 }

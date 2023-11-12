@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EverydayLove2"
+             xmlns:notes="clr-namespace:EverydayLove2.Notes"
+             x:Class="EverydayLove2.SavedNotesPage"
+             x:DataType="local:SavedNotesViewModel">
+    <CarouselView ItemsSource="{Binding SavedNotes}">
+        <CarouselView.ItemTemplate>
+            <DataTemplate x:DataType="notes:Note">
+                <Grid VerticalOptions="Fill"
+                      HorizontalOptions="Fill">
+                    <Image Source="{Binding Source = {x:Static local:Settings.SavedBackground}}"
+                           Aspect="AspectFill" />
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="60" />
+                        </Grid.RowDefinitions>
+                        <ScrollView Grid.Row="0">
+                            <VerticalStackLayout Spacing="10"
+                                                 Padding="30,0"
+                                                 VerticalOptions="Center">
+
+                                <Image Source="{Binding ImagePath}"
+                                       IsVisible="{Binding HasImage}"
+                                       WidthRequest="300"
+                                       MinimumWidthRequest="300"
+                                       HeightRequest="350"
+                                       MaximumHeightRequest="350"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Start"
+                                       Margin="10"/>
+
+                                <Label Text="{Binding NoteText}"
+                                       SemanticProperties.HeadingLevel="Level1"
+                                       Margin="25"
+                                       FontSize="26"
+                                       TextColor="White"
+                                       LineBreakMode="WordWrap"
+                                       HorizontalOptions="Center"
+                                       FontFamily="OpenSans-Semibold"/>
+                            </VerticalStackLayout>
+                        </ScrollView>
+                        <Label Grid.Row="1"
+                               Text="{Binding Sender}"
+                               FontSize="20"
+                               TextColor="White"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Start"
+                               FontFamily="OpenSans-Semibold"
+                               Margin="20"/>
+                    </Grid>
+                </Grid>
+            </DataTemplate>
+        </CarouselView.ItemTemplate>
+    </CarouselView>
+</ContentPage>

@@ -8,11 +8,15 @@ namespace EverydayLove2.Notes
     {
         Task Initialize();
         Task<Note> GetNoteAsync();
+        void SaveOrRemoveNote(Note note, bool saved);
+        List<Note> GetSavedNotes();
     }
 
     public class NotesRepository : INotesRepository
     {
         private SQLiteConnection _database;
+        private Note _currentNote;
+
         public async Task Initialize()
         {
             if (_database != null) return;
@@ -71,11 +75,15 @@ namespace EverydayLove2.Notes
                 note.ShownCounter++;
                 // 6. update db
                 _database.Update(note, typeof(Note));
+                _currentNote = note;
                 return note;
             }
             else
             {
-                return await GetLastShownNote();
+                if (_currentNote == null)
+                    _currentNote = await GetLastShownNote();
+
+                return _currentNote;
             }
         }
 
@@ -117,6 +125,17 @@ namespace EverydayLove2.Notes
             var lastShownNote = await GetLastShownNote();
             var lastShown = lastShownNote.LastShown;
             return lastShown == null || lastShown.Value.Date != DateTime.Today;
+        }
+
+        public void SaveOrRemoveNote(Note note, bool saved)
+        {
+            note.Saved = saved;
+            _database.Update(_currentNote, typeof(Note));
+        }
+
+        public List<Note> GetSavedNotes()
+        {
+            return _database.Table<Note>().Where(n => n.Saved).ToList();
         }
     }
 }

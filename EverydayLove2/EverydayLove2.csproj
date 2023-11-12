@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-ios</TargetFrameworks>
-		<TargetFramework>net6.0-ios</TargetFramework>
+		<TargetFramework>net7.0-ios</TargetFramework>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>EverydayLove2</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -32,6 +31,18 @@
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
 	  <WarningLevel>4</WarningLevel>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
+	  <CreatePackage>false</CreatePackage>
+	  <CodesignProvision>Automatic</CodesignProvision>
+	  <CodesignKey>iPhone Distribution: Eszter Horvath (SK7N3VC2S3)</CodesignKey>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	  <AssemblyOriginatorKeyFile>..\..\..\Documents\EverydayLove\ios_distribution.cer</AssemblyOriginatorKeyFile>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+	  <CreatePackage>false</CreatePackage>
+	  <MtouchLink>None</MtouchLink>
+	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#FFFFFF" />
@@ -54,11 +65,13 @@
 	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
 	  <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.5" />
 	  <PackageReference Include="Plugin.LocalNotification" Version="10.1.8" />
+	  <PackageReference Include="CommunityToolkit.Maui" Version="6.1.0" />
 	</ItemGroup>
 	
 	<ItemGroup>
 	  <Folder Include="Notes\" />
 	  <Folder Include="PushNotification\" />
+	  <Folder Include="Helpers\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Remove="PushNotification\" />

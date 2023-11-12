@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EverydayLove2"
+             x:Class="EverydayLove2.FlyoutMenuPage"
+             Title="We love you every day."
+             Background="{StaticResource Primary}">
+    <CollectionView x:Name="collectionView"
+                    x:FieldModifier="public"
+                    SelectionMode="Single"
+                    Margin="0,40,0,0">
+        <CollectionView.ItemsSource>
+            <x:Array Type="{x:Type local:FlyoutPageItem}">
+                <local:FlyoutPageItem Title="Home"
+                                      IconSource="homecustom.png"
+                                      TargetType="{x:Type local:MainPage}" />
+                <local:FlyoutPageItem Title="Saved"
+                                      IconSource="heartmultiplecustom.png"
+                                      TargetType="{x:Type local:SavedNotesPage}" />
+                <local:FlyoutPageItem Title="Settings"
+                                      IconSource="settingscustom.png"
+                                      TargetType="{x:Type local:SettingsPage}" />
+            </x:Array>
+        </CollectionView.ItemsSource>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid Padding="5,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="{Binding IconSource}" />
+                    <Label Grid.Column="1"
+                           Margin="10,0"
+                           Text="{Binding Title}"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           TextColor="White" />
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

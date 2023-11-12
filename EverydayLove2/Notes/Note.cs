@@ -1,5 +1,4 @@
-﻿using System;
-using System.Globalization;
+﻿using System.Globalization;
 using SQLite;
 
 namespace EverydayLove2.Notes
@@ -42,6 +41,8 @@ namespace EverydayLove2.Notes
         public int ShownCounter { get; set; }
 
         public DateTime? LastShown { get; set; }
+
+        public bool Saved { get; set; }
     }
 }
 
